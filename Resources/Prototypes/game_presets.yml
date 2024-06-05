@@ -43,6 +43,7 @@
   description: greenshift-description
   rules:
   - BasicRoundstartVariation
+  - Greenshift # Corvax-Greenshift
 
 - type: gamePreset
   id: Secret
