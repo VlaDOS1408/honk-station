@@ -1,0 +1,68 @@
+- type: gameMap
+  id: HonkTiny # айди прототипа вашей карты
+  mapName: 'Tiny' # название карты
+  mapPath: /Maps/honk_tiny.yml # путь до файла карты
+  minPlayers: 0 # минимальное количество игроков для появления карты в голосовании
+  maxPlayers: 10 # максимально количество игроков для карты
+  stations:
+    Tiny: # айди карты, которое вы прописывали в BecomeStationComponent
+      stationProto: StandardNanotrasenStation
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: '{0} Tiny {1}' # шаблон для названия станции в раунде
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: 'HS' # префикс автора для карты
+        - type: StationEmergencyShuttle
+          emergencyShuttlePath: /Maps/Shuttles/emergency.yml # путь до шаттла эвакуации, который будет использоваться на этой карте
+        - type: StationJobs
+          overflowJobs: # роли, на которое не будет ограничения по количеству
+            - Passenger
+          availableJobs:
+            # service
+            HeadOfPersonnel: [ 1, 1 ] # первая цифра - количество раундстарт мест для данной роли, вторая цифра - количество мест для позднего присоединения.
+            Passenger: [ -1, -1 ]
+            ServiceWorker: [ 1, 2 ]
+            Bartender: [ 1, 1 ]
+            Botanist: [ 1, 1 ]
+            # Boxer: [ 0, 0 ]
+            Chef: [ 1, 1 ]
+            Clown: [ 1, 1 ]
+            Janitor: [ 1, 1 ]
+            # Mime: [ 0, 0 ]
+            # Chaplain: [ 0, 0 ]
+            # Librarian: [ 0, 0 ]
+            Musician: [ 1, 1 ]
+            # Reporter: [ 0, 0 ]
+            # Zookeeper: [ 0, 0 ]
+            # command
+            # Captain: [ 0, 0 ]
+            # IAA: [ 0, 0 ]
+            # engineering
+            # ChiefEngineer: [ 0, 0 ]
+            AtmosphericTechnician: [ 1, 1 ]
+            StationEngineer: [ 1, 1 ]
+            # TechnicalAssistant: [ 0, 0 ]
+            # medical
+            # ChiefMedicalOfficer: [ 0, 0 ]
+            # Paramedic: [ 0, 0 ]
+            # Chemist: [ 0, 0 ]
+            MedicalDoctor: [ 1, 1 ]
+            # MedicalIntern: [ 0, 0 ]
+            # Psychologist: [ 0, 0 ]
+            # science
+            # ResearchDirector: [ 0, 0 ]
+            Scientist: [ 1, 1 ]
+            # ResearchAssistant: [ 0, 0 ]
+            # Borg: [ 0, 0 ]
+            # security
+            # HeadOfSecurity: [ 0, 0 ]
+            # Warden: [ 0, 0 ]
+            # Detective: [ 0, 0 ]
+            SecurityOfficer: [ 1, 1 ]
+            # SecurityCadet: [ 0, 0 ]
+            # cargo
+            # Quartermaster: [ 0, 0 ]
+            SalvageSpecialist: [ 1, 1 ]
+            # CargoTechnician: [ 0, 0 ]
+

@@ -1,5 +1,5 @@
 - type: gameMapPool
-  id: CorvaxDefaultMapPool
+  id: HonkDefaultMapPool
   maps:
   - CorvaxDelta
   - CorvaxAvrite
