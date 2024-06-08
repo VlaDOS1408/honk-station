@@ -15,6 +15,8 @@
             prefixCreator: 'HS' # префикс автора для карты
         - type: StationEmergencyShuttle
           emergencyShuttlePath: /Maps/Shuttles/emergency.yml # путь до шаттла эвакуации, который будет использоваться на этой карте
+        - type: StationCargoShuttle
+          path: /Maps/Shuttles/cargo_honktiny.yml
         - type: StationJobs
           overflowJobs: # роли, на которое не будет ограничения по количеству
             - Passenger
